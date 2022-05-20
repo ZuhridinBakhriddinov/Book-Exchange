@@ -10,10 +10,6 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/api/user-service/**
-        - id: attachment-service
-          uri: lb://attachment-service
-          predicates:
-            - Path=/api/attachment-service/**
         - id: book-service
           uri: lb://book-service
           predicates:

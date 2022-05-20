@@ -15,7 +15,6 @@
         <module>EurekaServer</module>
         <module>ApiGateway</module>
         <module>FeignClients</module>
-        <module>Api-Attachment</module>
         <module>BookService</module>
         <module>UserService</module>
     </modules>

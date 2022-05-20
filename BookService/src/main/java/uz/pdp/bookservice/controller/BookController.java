@@ -34,18 +34,6 @@ public class BookController {
         return ResponseEntity.status(apiResponse.isSuccess() ? 200 : 404).body(apiResponse.isSuccess() ? apiResponse.getObject() : null);
     }
 
-    @GetMapping("/user-collection/{userId}")
-    public HttpEntity<?> getUserBookCollection(@PathVariable Integer userId,
-                                               @RequestParam(defaultValue = "0") Integer page,
-                                               @RequestParam(defaultValue = "10") Integer size) {
-        ApiResponse apiResponse = bookService.getUserBookCollection(userId, page, size);
-        return ResponseEntity.status(apiResponse.isSuccess() ? 200 : 404).body(apiResponse.getObject());
-    }
 
-    @PostMapping("/add-book-to-collection/{bookId}")
-    public HttpEntity<?> addBookToCollection(@PathVariable Integer bookId) {
-        ApiResponse apiResponse = bookService.addBookToCollection(bookId);
-        return ResponseEntity.status(apiResponse.isSuccess() ? 200 : 404).body(apiResponse);
-    }
 
 }
